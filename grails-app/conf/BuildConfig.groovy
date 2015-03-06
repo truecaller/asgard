@@ -52,7 +52,9 @@ grails.project.dependency.resolution = {
         grailsHome()
         grailsCentral()
         mavenCentral()
+        mavenLocal()
         mavenRepo "http://dl.bintray.com/spinnaker/spinnaker"
+        mavenRepo "http://repo.grails.org/grails/repo/"
 
         // Optional custom repository for dependencies.
         Closure internalRepo = {
@@ -93,7 +95,7 @@ grails.project.dependency.resolution = {
 
         compile(
                 // Amazon Web Services programmatic interface. Transitive dependency of glisten, but also used directly.
-                'com.amazonaws:aws-java-sdk:1.7.5',
+                'com.amazonaws:aws-java-sdk:1.8.3',
 
                 // Enables publication of a health check URL for deploying Asgard, and an on/off switch for activities.
                 // Transitive dependencies include:
