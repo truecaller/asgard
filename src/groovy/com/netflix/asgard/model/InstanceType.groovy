@@ -51,7 +51,15 @@ enum InstanceType {
     R3Xlarge("r3.xlarge"),
     R32xlarge("r3.2xlarge"),
     R34xlarge("r3.4xlarge"),
-    R38xlarge("r3.8xlarge")
+    R38xlarge("r3.8xlarge"),
+    T2Micro("t2.micro"),
+    T2Small("t2.small"),
+    T2Medium("t2.medium"),
+    C4Large("c4.large"),
+    C4Xlarge("c4.xlarge"),
+    C42xlarge("c4.2xlarge"),
+    C44xlarge("c4.4xlarge"),
+    C48xlarge("c4.8xlarge")
 
     private String value
 
