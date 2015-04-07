@@ -141,7 +141,17 @@ enum Region {
         }
         []
     }
-    static Region defaultRegion() { Region.US_EAST_1 }
+    static Region defaultRegion() { 
+            String defaultRegion = System.getProperty('defaultRegion')
+            switch (defaultRegion) {
+                    case "eu-west-1":
+                        return Region.EU_WEST_1
+                    case "sa-east-1":
+                        return Region.SA_EAST_1
+                    default:
+                        return Region.US_EAST_1
+           }
+    }
 
     /**
      * @return a human readable description of the code name and geographical location of the region
