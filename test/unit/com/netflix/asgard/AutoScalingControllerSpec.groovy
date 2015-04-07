@@ -371,7 +371,7 @@ class AutoScalingControllerSpec extends Specification {
             'm2.2xlarge',
             'm2.4xlarge',
             'm2.xlarge'
-        ] == attrs['instanceTypes']*.name
+        ].sort() == attrs['instanceTypes']*.name.sort()
     }
 
     def "create should handle invalid inputs"() {
